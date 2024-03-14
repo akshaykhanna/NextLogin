@@ -36,6 +36,11 @@ app.post('/login', (req, res) => {
     res.json({ token });
 });
 
+// Route to get all users
+app.get('/users', (req, res) => {
+    res.json(users);
+});
+
 // Route to handle user registration
 app.post('/register', (req, res) => {
     const { username, password } = req.body;
